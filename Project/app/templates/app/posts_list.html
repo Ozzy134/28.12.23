@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for item in object_list %}
+        <h1>{{ item.title }}</h1>
+        <hr>
+        Coments:
+        <div>{% for i in item.comment.all %}
+            <h4>{{ i.comment }}</h4>
+            <p style="font-style:italic">{{ i.user..username }}</p>
+
+        {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>
